@@ -1,6 +1,6 @@
 #if !defined(USING_MAP_DATUM)
 
-	#include "../../mods/corporate/_corporate.dme"
+/*	#include "../../mods/corporate/_corporate.dme"
 	#include "../../mods/ascent/_ascent.dme"
 
 	#include "../../mods/government/away_sites/icarus/icarus.dm"
@@ -19,7 +19,7 @@
 	#include "../away/smugglers/smugglers.dm"
 	#include "../away/slavers/slavers_base.dm"
 	#include "../away/unishi/unishi.dm"
-	#include "../away/yacht/yacht.dm"
+	#include "../away/yacht/yacht.dm"*/
 
 	#include "tradeship_antagonists.dm"
 	#include "tradeship_areas.dm"

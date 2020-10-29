@@ -7,7 +7,7 @@
 		var/decl/material/mat = thing
 		if(!mat.hidden_from_codex)
 			var/datum/codex_entry/entry = new(_display_name = "[mat.name] (substance)", _associated_strings = list("[mat.name] pill"))
-			var/new_lore_text = initial(mat.lore_text) 
+			var/new_lore_text = initial(mat.lore_text)
 			if(mat.taste_description)
 				new_lore_text = "[new_lore_text]<br>It apparently tastes of [mat.taste_description]."
 			entry.lore_text = new_lore_text
@@ -145,10 +145,9 @@
 			if(comparison >= 0.9 && comparison <= 1.1)
 				material_info += "<li>It is as durable as steel.</li>"
 			else if (comparison < 0.9)
-				comparison = round(1/comparison,0.1)
-				material_info += "<li>It is ~[comparison] times structurally weaker than steel.</li>"
-			else
-				material_info += "<li>It is ~[comparison] times more durable than steel.</li>"
+				material_info += "<li>It is ~[round(1/(comparison == 0 ? 0.1 : comparison),0.1)] times structurally weaker than steel.</li>"
+			else if (comparison > 1.1)
+				material_info += "<li>It is ~[round(comparison,0.1)] times more durable than steel.</li>"
 			if(mat.flags & MAT_FLAG_UNMELTABLE)
 				material_info += "<li>It is impossible to dissolve.</li>"
 			if(mat.flags & MAT_FLAG_BRITTLE)

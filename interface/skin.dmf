@@ -1006,7 +1006,7 @@ window "mapwindow"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-	elem "map"
+	elem "mapkostul"
 		type = MAP
 		pos = 0,0
 		size = 640x480
