@@ -1,0 +1,8 @@
+#ifndef CONTENT_PACK_MINDCAST
+#define CONTENT_PACK_MINDCAST
+#include "_mindcast.dm"
+#include "movement.dm"
+#include "projectiles.dm"
+#include "skill.dm"
+#include "spirit.dm"
+#endif
